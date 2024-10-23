@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import { gmarket_md, noto_sans_KR } from "./fonts/fonts";
+import "@/styles/globals.css";
+import { changwon_bold, gmarket_md, noto_sans_KR } from "@/styles/fonts/fonts";
+import Header from "@/components/common/Header";
+import Container from "@/components/common/Container";
+import Footer from "@/components/common/Footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,9 +18,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${gmarket_md.variable} ${noto_sans_KR.className} antialiased`}
+        className={`${gmarket_md.variable} ${noto_sans_KR.className} ${changwon_bold.variable} antialiased`}
       >
-        {children}
+        <Header />
+        <main>
+          <Container>{children}</Container>
+        </main>
+        <Footer />
       </body>
     </html>
   );

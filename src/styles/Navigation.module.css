@@ -1,0 +1,19 @@
+/* 기본 스타일 (데스크탑) */
+.navigation {
+  display: flex;
+  gap: 16px;
+}
+
+@media (max-width: 1023px) {
+  .navigation {
+    display: block;
+    position: fixed;
+    right: 0;
+    top: 56px;
+    height: 100vh;
+    max-width: 200px;
+    width: 90%;
+    border-left: 1px solid var(--foreground);
+    padding: 1rem;
+  }
+}

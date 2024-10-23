@@ -13,3 +13,9 @@ export const gmarket_md = localFont({
   display: "swap",
   weight: "500",
 });
+
+export const changwon_bold = localFont({
+  src: "./ChangwonDangamAsac-Bold.woff",
+  variable: "--font-changwon-bold",
+  display: "swap",
+});

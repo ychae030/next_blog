@@ -12,6 +12,8 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         brand: "var(--brand)",
+        point: "var(--point)",
+        sub: "var(--sub)",
       },
     },
   },

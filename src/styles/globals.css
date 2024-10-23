@@ -3,9 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: #fef5ee;
   --foreground: #171717;
-  --brand: #ffe066;
+  --brand: #2b5637;
+  --point: #f3d002;
+  --sub: #f8b0c4;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,5 +23,5 @@ body {
   background: var(--background);
 }
 p {
-  color: var(--brand);
+  color: var(--sub);
 }
