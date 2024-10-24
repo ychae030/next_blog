@@ -1,0 +1,3 @@
+.posts li:not(:first-of-type) {
+  margin-left: -1px;
+}
