@@ -1,11 +1,12 @@
 "use client";
+
 import React, { useState } from "react";
 import Navigation from "./Navigation";
 import Container from "./Container";
-import ham from "../../../public/hamburger.png";
+import ham from "@public/images/hamburger.png";
 import Image from "next/image";
 
-export default function header() {
+export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <header className="border-b border-foreground">

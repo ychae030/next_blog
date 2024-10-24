@@ -1,4 +1,4 @@
-import Profile from "@/components/About/Profile";
+import Profile from "@/components/about/Profile";
 
 export default function HomePage() {
   return (
