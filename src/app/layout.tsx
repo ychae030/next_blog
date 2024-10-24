@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "@/styles/globals.css";
-import { changwon_bold, gmarket_md, noto_sans_KR } from "@/styles/fonts/fonts";
+import { changwon_bold, gmarket_md } from "@/styles/fonts/fonts";
 import Header from "@/components/common/Header";
 import Container from "@/components/common/Container";
 import Footer from "@/components/common/Footer";
@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${gmarket_md.variable} ${noto_sans_KR.className} ${changwon_bold.variable} antialiased`}
+        className={`${gmarket_md.variable} ${changwon_bold.variable} antialiased`}
       >
         <Header />
         <main>

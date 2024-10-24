@@ -3,11 +3,19 @@
 @tailwind utilities;
 
 :root {
+  /* colors */
   --background: #fef5ee;
   --foreground: #171717;
   --brand: #2b5637;
   --point: #f3d002;
   --sub: #f8b0c4;
+
+  /* responsive */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,7 +29,5 @@
 body {
   color: var(--foreground);
   background: var(--background);
-}
-p {
-  color: var(--sub);
+  font-family: var(--font-gmarket-md);
 }
