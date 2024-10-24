@@ -12,8 +12,9 @@ export default function Profile() {
             <Image
               src={photo}
               alt="Profile Photo"
-              layout="fill"
-              objectFit="cover"
+              fill={true}
+              style={{ objectFit: "cover" }}
+              sizes="300"
             />
           </div>
         </div>
@@ -47,7 +48,7 @@ export default function Profile() {
         </svg>
       </div>
       <div className={styles.introTextWrapper}>
-        <h2 className={styles.introHeading}>HI, I&339;m ChaeWon</h2>
+        <h2 className={styles.introHeading}>HI, I&#39;m ChaeWon</h2>
         <p>발전하는 프론트엔드 개발자 유채원입니다!</p>
         <p>
           사용자 경험과 팀 소통을 중시하며, 문제 해결에 집요하게 집중합니다.
