@@ -9,11 +9,13 @@
     display: block;
     position: fixed;
     right: 0;
-    top: 56px;
+    top: 57px;
     height: 100vh;
     max-width: 200px;
     width: 90%;
     border-left: 1px solid var(--foreground);
     padding: 1rem;
+    z-index: 9999;
+    background-color: var(--background);
   }
 }

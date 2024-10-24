@@ -1,3 +1,9 @@
-export default function Home() {
-  return <></>;
+import Profile from "@/components/About/Profile";
+
+export default function HomePage() {
+  return (
+    <>
+      <Profile />
+    </>
+  );
 }
