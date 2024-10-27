@@ -7,12 +7,13 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 
-type CardSliderProps = {
+type Props = {
   posts: PostType[];
 };
 
-export default function CardSlider({ posts }: CardSliderProps) {
+export default function Carousel({ posts }: Props) {
   const [swiper, setSwiper] = useState<SwiperClass>();
   const [isBeginning, setIsBeginning] = useState<boolean | undefined>(true);
   const [isEnd, setIsEnd] = useState<boolean | undefined>(false);
@@ -27,14 +28,31 @@ export default function CardSlider({ posts }: CardSliderProps) {
     setIsEnd(swiper?.isEnd);
     setIsBeginning(false);
   };
-
   return (
-    <>
+    <div className="relative">
       <Swiper
         modules={[Navigation, Pagination]}
         spaceBetween={-1}
-        slidesPerView={4}
+        slidesPerView={1}
         onSwiper={(e) => setSwiper(e)}
+        breakpoints={{
+          640: {
+            slidesPerView: 1, // sm
+            spaceBetween: 0,
+          },
+          768: {
+            slidesPerView: 2, // md
+            spaceBetween: -1,
+          },
+          1024: {
+            slidesPerView: 3, // lg
+            spaceBetween: -1,
+          },
+          1280: {
+            slidesPerView: 4, // xl
+            spaceBetween: -1,
+          },
+        }}
       >
         {posts.map(({ title, date, category, description, path }) => (
           <SwiperSlide key={title}>
@@ -48,18 +66,20 @@ export default function CardSlider({ posts }: CardSliderProps) {
           </SwiperSlide>
         ))}
       </Swiper>
-      <button
-        className={isBeginning ? "text-red-400" : "text-foreground"}
-        onClick={handlePrev}
-      >
-        이전
-      </button>
-      <button
-        className={isEnd ? "text-red-400" : "text-foreground"}
-        onClick={handleNext}
-      >
-        다음
-      </button>
-    </>
+      <div className="text-4xl">
+        <button
+          className={`${isBeginning ? "hidden" : "text-foreground"} absolute -left-10 top-1/2`}
+          onClick={handlePrev}
+        >
+          <IoIosArrowRoundBack />
+        </button>
+        <button
+          className={`${isEnd ? "hidden" : "text-foreground"} absolute -right-10 top-1/2`}
+          onClick={handleNext}
+        >
+          <IoIosArrowRoundForward />
+        </button>
+      </div>
+    </div>
   );
 }
