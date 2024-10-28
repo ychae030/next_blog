@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "@/styles/globals.css";
 import { changwon_bold, gmarket_md } from "@/styles/fonts/fonts";
 import Header from "@/components/common/Header";
-import Container from "@/components/common/Container";
 import Footer from "@/components/common/Footer";
 
 export const metadata: Metadata = {
@@ -21,9 +20,7 @@ export default function RootLayout({
         className={`${gmarket_md.variable} ${changwon_bold.variable} antialiased`}
       >
         <Header />
-        <main>
-          <Container>{children}</Container>
-        </main>
+        <main> {children}</main>
         <Footer />
       </body>
     </html>
