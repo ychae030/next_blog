@@ -1,3 +1,4 @@
+import MarkdownViewer from "@/components/posts/MarkdownViewer";
 import { getPostData } from "@/service/posts";
 import React from "react";
 
@@ -9,5 +10,10 @@ type Props = {
 export default async function PostDetailPage({ params }: Props) {
   const { path } = await params;
   const post = await getPostData(path);
-  return <div>{post.content}</div>;
+  const { content } = post;
+  return (
+    <div>
+      <MarkdownViewer content={content} />
+    </div>
+  );
 }
