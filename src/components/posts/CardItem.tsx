@@ -21,8 +21,8 @@ export default function CardItem({
           height={200}
         />
         <div className="p-5">
-          <h4 className="mb-2 text-lg">{title}</h4>
-          <p className="text-overflow mb-2">{description}</p>
+          <h4 className="mb-2 truncate text-lg">{title}</h4>
+          <p className="mb-2 truncate">{description}</p>
           <div className="flex justify-between text-sm">
             <span>{category}</span>
             <span>{date.toString()}</span>

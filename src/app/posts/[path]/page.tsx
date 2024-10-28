@@ -1,5 +1,13 @@
+import { getPostData } from "@/service/posts";
 import React from "react";
 
-export default function PostDetailPage() {
-  return <div>상세내용</div>;
+type Props = {
+  params: {
+    path: string;
+  };
+};
+export default async function PostDetailPage({ params }: Props) {
+  const { path } = await params;
+  const post = await getPostData(path);
+  return <div>{post.content}</div>;
 }

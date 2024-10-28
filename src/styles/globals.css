@@ -32,14 +32,6 @@ body {
   font-family: var(--font-gmarket-md);
 }
 
-.text-overflow {
-  @apply overflow-hidden break-words;
-  display: -webkit-box;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  line-clamp: 1;
-  -webkit-box-orient: vertical;
-}
 h3 {
   font-family: var(--font-changwon-bold);
   @apply text-2xl;
