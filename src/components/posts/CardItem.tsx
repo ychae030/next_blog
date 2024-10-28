@@ -11,17 +11,19 @@ export default function CardItem({
   path,
 }: Omit<PostType, "featured">) {
   return (
-    <Link href={`posts/${path}`}>
-      <article className="border border-foreground">
+    <Link href={`posts/${path}`} className="group">
+      <article className="overflow-hidden border border-foreground">
         <Image
-          className="w-full"
+          className="w-full duration-100 group-hover:scale-x-110"
           src={`/images/posts/${path}.png`}
           alt={title}
           width={300}
           height={200}
         />
         <div className="p-5">
-          <h4 className="mb-2 truncate text-lg">{title}</h4>
+          <h4 className="mb-2 truncate text-lg group-hover:bg-point">
+            {title}
+          </h4>
           <p className="mb-2 truncate">{description}</p>
           <div className="flex justify-between text-sm">
             <span>{category}</span>

@@ -28,6 +28,7 @@ export default function Carousel({ posts }: Props) {
     setIsEnd(swiper?.isEnd);
     setIsBeginning(false);
   };
+  const BUTTON_CLASS = "absolute top-1/2 -translate-y-1/2";
   return (
     <div className="relative">
       <Swiper
@@ -68,13 +69,13 @@ export default function Carousel({ posts }: Props) {
       </Swiper>
       <div className="text-4xl">
         <button
-          className={`${isBeginning ? "hidden" : "text-foreground"} absolute -left-10 top-1/2`}
+          className={`${isBeginning ? "hidden" : "text-foreground"} ${BUTTON_CLASS} -left-10`}
           onClick={handlePrev}
         >
           <IoIosArrowRoundBack />
         </button>
         <button
-          className={`${isEnd ? "hidden" : "text-foreground"} absolute -right-10 top-1/2`}
+          className={`${isEnd ? "hidden" : "text-foreground"} ${BUTTON_CLASS} -right-10`}
           onClick={handleNext}
         >
           <IoIosArrowRoundForward />
