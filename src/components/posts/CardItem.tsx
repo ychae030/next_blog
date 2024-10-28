@@ -21,7 +21,7 @@ export default function CardItem({
           height={200}
         />
         <div className="p-5">
-          <h4 className="mb-2 truncate text-lg group-hover:bg-point">
+          <h4 className="mb-2 truncate text-lg group-hover:text-sub">
             {title}
           </h4>
           <p className="mb-2 truncate">{description}</p>

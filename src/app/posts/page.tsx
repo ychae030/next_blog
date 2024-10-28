@@ -1,12 +1,10 @@
-import CardGrid from "@/components/posts/CardGrid";
+import FilteredPosts from "@/components/posts/FilteredPosts";
 import { getAllPosts } from "@/service/posts";
 import React from "react";
 
 export default async function PostsPage() {
   const posts = await getAllPosts();
-  return (
-    <div className="py-10">
-      <CardGrid posts={posts} gap="gap-y-6" />
-    </div>
-  );
+  const categories = [...new Set(posts.map((post) => post.category))];
+
+  return <FilteredPosts posts={posts} categories={categories} />;
 }
