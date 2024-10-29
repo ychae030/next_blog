@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${gmarket_md.variable} ${changwon_bold.variable} antialiased`}
+        className={`${gmarket_md.variable} ${changwon_bold.variable} min-h-screen antialiased`}
       >
         <Header />
         <main> {children}</main>

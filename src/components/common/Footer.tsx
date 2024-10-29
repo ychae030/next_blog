@@ -3,9 +3,9 @@ import Container from "./Container";
 
 export default function Footer() {
   return (
-    <footer className="">
+    <footer className="flex py-5 text-center text-sm">
       <Container>
-        <span></span>
+        <span>© 2024 ychae030. All rights reserved.</span>
       </Container>
     </footer>
   );

@@ -83,6 +83,7 @@
   margin-bottom: 10px;
 }
 .button {
+  display: inline-block;
   background-color: var(--brand);
   color: var(--background);
   padding: 10px 20px;

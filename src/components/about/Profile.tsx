@@ -2,6 +2,7 @@ import React from "react";
 import photo from "@public/images/photo.jpeg";
 import Image from "next/image";
 import styles from "@/styles/Profile.module.css";
+import Link from "next/link";
 
 export default function Profile() {
   return (
@@ -53,7 +54,9 @@ export default function Profile() {
         <p>
           사용자 경험과 팀 소통을 중시하며, 문제 해결에 집요하게 집중합니다.
         </p>
-        <button className={styles.button}>Contact Me!</button>
+        <Link href="/contact" className={styles.button}>
+          Contact Me!
+        </Link>
       </div>
     </article>
   );

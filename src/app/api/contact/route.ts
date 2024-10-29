@@ -29,7 +29,7 @@ export async function POST(request: Request) {
     });
   } catch (error) {
     return NextResponse.json(
-      { message: "오류가 발생했습니다" },
+      { message: `${error} 오류가 발생했습니다` },
       { status: 500 },
     );
   }
