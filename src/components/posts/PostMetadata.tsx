@@ -7,7 +7,7 @@ import { PostType } from "@/service/posts";
 type Props = {
   post: PostType;
 };
-export default function Metadata({
+export default function PostMetadata({
   post: { path, title, description, date },
 }: Props) {
   return (
