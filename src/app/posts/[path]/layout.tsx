@@ -3,13 +3,13 @@ import { getPostData } from "@/service/posts";
 import { Metadata } from "next";
 
 type Props = {
-  params: {
+  params: Promise<{
     path: string;
-  };
+  }>;
 };
-
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { path } = await params;
+
   const { title, description } = await getPostData(path);
   return {
     title,
@@ -22,5 +22,5 @@ export default function layout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <> {children}</>;
+  return <>{children}</>;
 }
