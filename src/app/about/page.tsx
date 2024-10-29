@@ -1,5 +1,10 @@
+import Profile from "@/components/about/Profile";
 import React from "react";
 
 export default function AboutPage() {
-  return <div></div>;
+  return (
+    <section>
+      <Profile />
+    </section>
+  );
 }
