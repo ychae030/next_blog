@@ -6,7 +6,9 @@ export default function Navigation() {
   return (
     <nav className={styles.navigation}>
       <Link href="/">HOME</Link>
-      <Link href="/about">ABOUT</Link>
+      <Link href="https://chaewon-portfolio.vercel.app/" target="_blank">
+        PORTFOLIO
+      </Link>
       <Link href="/posts">POSTS</Link>
       <Link href="/contact">CONTACT</Link>
     </nav>
