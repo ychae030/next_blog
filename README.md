@@ -8,9 +8,20 @@ Next.js를 사용하여 정적 블로그를 구현했습니다. markdown 라이�
 
 ### 기술스택
 
+#### Frontend
+
 <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
 <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
 <img src="https://img.shields.io/badge/Tailwind CSS-06B6D4?style=for-the-badge&logo=Tailwind CSS&logoColor=white"/>
+
+#### Deployment
+
 <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=Vercel&logoColor=white"/>
 
-힘들었던 점
+## ✅ 프로젝트 주안점
+
+- **Markdown 기반 콘텐츠 관리**: Markdown 파일을 활용하여 정적 페이지를 효율적으로 관리했습니다.
+- **CSS 애니메이션**: 순수 CSS로 페이지의 시각적 효과 구현했습니다.
+- **메일 링크 지원**: mailto를 통해 간단한 연락 기능 제공했습니다.
+- **Vercel 배포**: Vercel을 활용하여 빠르고 안정적인 정적 블로그를 배포했습니다.
+- **간결한 디자인과 UX**: 미니멀리즘 디자인으로 사용자 경험을 향상했습니다.
